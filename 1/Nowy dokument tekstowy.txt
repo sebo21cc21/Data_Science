@@ -1,0 +1,13 @@
+def zlicz(lista, wynik='lista',typ='int'):
+  if(wynik == 'lista'):
+    if(typ == 'int'):
+      return [len(x) for x in lista];
+    else:
+      return [float(len(x)) for x in lista];
+  else:
+    if(typ== 'int'):
+      return{x: len(x) for x in lista}
+    else:
+      return {x: float(len(x)) for x in lista}
+
+zlicz(["adam", "andrzej", "zosia"], wynik='dict',typ='float')
